@@ -9,11 +9,10 @@ const arrImages = [
   "img/05.jpg",
 ];
 
-for (let i = 0; i < arrImages.lenght; i++) {
+for (let i = 0; i < arrImages.length; i++) {
   const eleImg = document.createElement("img");
   eleImg.src = arrImages[i];
   eleImg.classList.add("slider-img");
-  console.log(eleImg);
 
   eleSlider.append(eleImg);
 }
