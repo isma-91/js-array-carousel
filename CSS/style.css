@@ -15,8 +15,8 @@ body {
   max-width: 900px;
   max-height: 500px;
   margin: auto;
-  border: 3px solid salmon;
   position: relative;
+  border: 2px solid black;
 }
 
 .slider-img {
@@ -35,7 +35,8 @@ body {
   inset: 0;
 }
 
-.arrow {
+.arrow-up,
+.arrow-down {
   font-size: 2em;
   margin: 0.3rem;
   color: white;
@@ -43,6 +44,7 @@ body {
   cursor: pointer;
 }
 
-.arrow:hover {
+.arrow-up:hover,
+.arrow-down:hover {
   opacity: 100%;
 }
