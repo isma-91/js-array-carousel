@@ -14,5 +14,8 @@ for (let i = 0; i < arrImages.length; i++) {
   eleImg.src = arrImages[i];
   eleImg.classList.add("slider-img");
 
+  if (i === 0) {
+    eleImg.classList.add("visible");
+  }
   eleSlider.append(eleImg);
 }
