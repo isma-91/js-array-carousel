@@ -37,9 +37,9 @@ eleArrDn.addEventListener("click", function () {
   //   eleArrDn.classList.add("hidden");
   // }
 
-  if (visibleValue === listImgs.length - 1) {
-    listImgs[visibleValue].classList.remove("visible");
-    listImgs[(visibleValue = 0)].classList.add("visible");
+  if (visibleValue > listImgs.length) {
+    visibleValue = 0;
+    listImgs[visibleValue].classList.add("visible");
   }
 });
 
@@ -53,9 +53,9 @@ eleArrUp.addEventListener("click", function () {
   // if (visibleValue === 0) {
   //   eleArrUp.classList.add("hidden");
   // }
-  if (visibleValue > 0) {
-    listImgs[visibleValue].classList.remove("visible");
-    listImgs[(visibleValue = arrImages.length - 1)].classList.add("visible");
-  }
+  // if ((visibleValue = 0)) {
+  //   listImgs[visibleValue].classList.remove("visible");
+  //   listImgs[(visibleValue = 4)].classList.add("visible");
+  // }
   eleArrDn.classList.remove("hidden");
 });
