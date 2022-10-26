@@ -28,25 +28,28 @@ const listImgs = document.querySelectorAll(".slider-img");
 eleArrDn.addEventListener("click", function () {
   listImgs[visibleValue].classList.remove("visible");
 
-  visibleValue++; //visibleValue = visibleValue + 1
+  if (visibleValue === listImgs.length - 1) {
+    visibleValue = 0;
+  } else {
+    visibleValue++; //visibleValue = visibleValue + 1
+  }
 
   listImgs[visibleValue].classList.add("visible");
 
-  eleArrUp.classList.remove("hidden");
+  // eleArrUp.classList.remove("hidden");
   // if (visibleValue === listImgs.length - 1) {
   //   eleArrDn.classList.add("hidden");
   // }
-
-  if (visibleValue > listImgs.length) {
-    visibleValue = 0;
-    listImgs[visibleValue].classList.add("visible");
-  }
 });
 
 eleArrUp.addEventListener("click", function () {
   listImgs[visibleValue].classList.remove("visible");
 
-  visibleValue--; //visibleValue = visibleValue + 1
+  if (visibleValue === 0) {
+    visibleValue = listImgs.length - 1;
+  } else {
+    visibleValue--; //visibleValue = visibleValue - 1
+  }
 
   listImgs[visibleValue].classList.add("visible");
 
@@ -57,5 +60,5 @@ eleArrUp.addEventListener("click", function () {
   //   listImgs[visibleValue].classList.remove("visible");
   //   listImgs[(visibleValue = 4)].classList.add("visible");
   // }
-  eleArrDn.classList.remove("hidden");
+  // eleArrDn.classList.remove("hidden");
 });
