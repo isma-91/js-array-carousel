@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+}
+
+.container {
+  height: 65%;
+  width: 85%;
+  max-width: 900px;
+  max-height: 500px;
+  margin: auto;
+  border: 3px solid salmon;
+}
+
+.slider-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
